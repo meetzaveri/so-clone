@@ -3,17 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { routes } from "./routes/routes";
 import { withAuth as AuthWrapper } from "./wrappers/auth";
 import Loadable from "react-loadable";
-import { createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
-import Rootreducer from "./store/store";
-import mySaga from "./sagas/sagas";
+import configureStore from "./store/store";
 import "./App.css";
 import "./components/main.css";
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(Rootreducer, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(mySaga);
+const store = configureStore({});
 
 const Loading = () => <div>Loading ...</div>;
 
@@ -34,6 +29,11 @@ const DashboardContainerLoader = Loadable({
 
 const WritePostContainerLoader = Loadable({
   loader: () => import("./containers/Writepost"),
+  loading: Loading
+});
+
+const ReadPostContainerLoader = Loadable({
+  loader: () => import("./containers/ReadPost"),
   loading: Loading
 });
 
@@ -63,6 +63,11 @@ class App extends Component {
                 exact
                 path={routes.write}
                 component={WritePostContainerLoader}
+              />
+              <Route
+                exact
+                path={routes.read + ":id"}
+                component={ReadPostContainerLoader}
               />
             </Switch>
           </Router>

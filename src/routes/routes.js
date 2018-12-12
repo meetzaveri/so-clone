@@ -2,5 +2,6 @@ export const routes = {
   index: "/",
   login: "/login",
   register: "/register",
-  write: "/questions/write"
+  write: "/questions/write",
+  read: "/questions/"
 };

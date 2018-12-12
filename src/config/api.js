@@ -3,6 +3,8 @@ export const API = {
   register: "http://localhost:8000/register"
 };
 
+const token = localStorage.getItem("token");
+
 export function ApiCall(apiName, methodType, data, header) {
   const options = {
     method: methodType,
@@ -35,3 +37,16 @@ export function ApiCall(apiName, methodType, data, header) {
       });
   });
 }
+
+export const configForGET = {
+  headers: {
+    Authorization: "Bearer " + token
+  }
+};
+
+export const configForTypeJson = {
+  headers: {
+    "Content-type": "application/json",
+    Authorization: "Bearer " + token
+  }
+};

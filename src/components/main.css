@@ -14,6 +14,38 @@
   margin-left: 12%;
 }
 
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.pv1 {
+  padding: 0.25rem 0;
+}
+
+.pv2 {
+  padding: 0.5rem 0;
+}
+
+.pv3 {
+  padding: 0.75rem 0;
+}
+
+.ph1 {
+  padding: 0 0.25rem;
+}
+
+.ph2 {
+  padding: 0 0.5rem;
+}
+
+.ph3 {
+  padding: 0 0.75rem;
+}
+
 .custom-form-register {
   margin: 0px 0px 10px 0px;
 }
@@ -24,4 +56,24 @@
 
 .nav_box > li > a {
   border-radius: 0px !important;
+}
+
+.post-container {
+  padding: 0.5rem 0.5rem;
+}
+.post-container .post-item {
+  padding: 0.5rem 0.5rem;
+}
+
+.post-container .post-item .post-vote-cell {
+  padding: 0 1.5rem;
+  color: darkgreen;
+}
+.post-vote-count {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.post-body-cell {
+  color: blue;
 }

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import Errorboundary from "../wrappers/errorboundary";
 import Login from "../components/login/login";
 import { login_request } from "../components/login/actions";
-import { API } from "../api/api";
+import { API } from "../config/api";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { routes } from "../routes/routes";

@@ -8,8 +8,8 @@ export const posts = [
     title: "Div not getting rendered",
     body: "Ak feko lorem ipsum get",
     tags: "html,css",
-    upvotes: 3,
-    downvotes: 0,
+    upvotes: ["7000", "7201", "7102"],
+    downvotes: [],
     comments: [{ userid: "7000", username: "Ben", comment: "Please improve" }],
     answers: [
       {
@@ -17,8 +17,8 @@ export const posts = [
         userid: "7200",
         username: "Ben",
         body: "lorem ipsum dolor ismet",
-        upvotes: 2,
-        downvotes: 0,
+        upvotes: ["7000", "7100"],
+        downvotes: [],
         isAccepted: false
       }
     ]
@@ -30,8 +30,8 @@ export const posts = [
     title: "JSX not being rendered",
     body: "Ak feko lorem ipsum get",
     tags: "html,css,js",
-    upvotes: 5,
-    downvotes: 2,
+    upvotes: ["7000", "7201", "7102", "7100"],
+    downvotes: ["7200"],
     comments: [{ userid: "7000", username: "Ben", comment: "Please improve" }],
     answers: [
       {
@@ -39,8 +39,8 @@ export const posts = [
         userid: "7201",
         username: "Alan",
         body: "lorem ipsum dolor ismet",
-        upvotes: 4,
-        downvotes: 0,
+        upvotes: ["7000", "7201", "7102", "7100"],
+        downvotes: [],
         isAccepted: false
       }
     ]
@@ -52,8 +52,8 @@ export const posts = [
     title: "CMD Not working",
     body: "Ak feko lorem ipsum get",
     tags: "shell,python",
-    upvotes: 1,
-    downvotes: 2,
+    upvotes: ["7200"],
+    downvotes: ["7100", "7101"],
     comments: [
       {
         userid: "7201",
@@ -67,21 +67,21 @@ export const posts = [
         userid: "7203",
         username: "Josh",
         body: "lorem ipsum dolor ismet",
-        upvotes: 2,
-        downvotes: 0,
+        upvotes: ["7100", "7101"],
+        downvotes: [],
         isAccepted: false
       }
     ]
   },
   {
     id: "12225222",
-    userid: "7100",
+    userid: "7300",
     username: "Jules",
     title: "Pytorch not working",
     body: "Pytorch  feko lorem ipsum get",
     tags: "python,html",
-    upvotes: 7,
-    downvotes: 2,
+    upvotes: ["7101", "7201", "7203"],
+    downvotes: ["7102"],
     comments: [],
     answers: [
       {
@@ -89,10 +89,15 @@ export const posts = [
         userid: "7200",
         username: "Ben",
         body: "lorem ipsum dolor ismet",
-        upvotes: 2,
+        upvotes: ["7100", "7300"],
         downvotes: 0,
         isAccepted: false
       }
     ]
   }
 ];
+
+export const returnSinglePost = (arr, id) => {
+  const filteredArr = arr.filter(item => item.id === id);
+  return filteredArr;
+};

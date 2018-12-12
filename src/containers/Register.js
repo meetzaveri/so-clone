@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Register from "../components/register/register";
-import { API } from "../api/api";
+import { API } from "../config/api";
 import { connect } from "react-redux";
 import { register_request } from "../components/register/actions";
 import PropTypes from "prop-types";
